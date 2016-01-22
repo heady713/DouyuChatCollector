@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+
+	"name": "AAA斗鱼弹幕抓取",
+	"description": "该插件可以保存弹幕数据为SQLite",
+	"version": "1.0",
+
+	"icons": {
+		"16": "icon@16c.png",
+		"48": "icon@48.png",
+		"128": "icon@128.png"
+	},
+
+	"background": {
+		"scripts": ["store.js", "background.js"],
+		"persistent": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://*.douyu.com/*"],
+			"js": ["jquery-2.1.3.min.js", "content.js"]
+		}
+	],
+
+	"page_action": {
+		"default_icon": "icon@16.png",
+		"default_title": "点击开始收集弹幕"
+	},
+
+	"permissions": ["tabs", "alarms"]
+}
