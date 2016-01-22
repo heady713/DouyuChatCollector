@@ -1,9 +1,3 @@
-/*
- * 1. 定时发送request
- * 2. 将收到的数据写入本地数据库
- * 3. 保存用户数峰值、主播信息
- */
-
 var webSql = new webStorage.webSql();
 webSql.openDatabase();
 webSql.createAllTables();

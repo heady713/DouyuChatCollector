@@ -1,10 +1,3 @@
-/*
- * 每隔相应时间：
- * 1. 获取弹幕至内存
- * 2. 删除页面上弹幕数据
- * 3. 异步返回弹幕数据给background.js
- */
-
 //取弹幕并清空
 var getChartList = function () {
 
